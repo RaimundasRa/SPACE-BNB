@@ -14,7 +14,8 @@ puts "fetching intergalatic colonies"
     description: Faker::Movies::StarWars.wookiee_sentence,
     location: Faker::Movies::StarWars.planet,
     population: Faker::Fantasy::Tolkien.race,
-    hostility: (1..100).to_a.sample
+    hostility: (1..100).to_a.sample,
+    user: User.first
   )
   puts colony.name
 end
