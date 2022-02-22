@@ -1,5 +1,5 @@
 class ColoniesController < ApplicationController
-  before_action :set_colony, only: [:show, :edit, :update]
+  before_action :set_colony, only: [:show, :edit, :update, :destroy]
 
   def new
     @colony = Colony.new
@@ -37,6 +37,11 @@ class ColoniesController < ApplicationController
 
   def show_my_colonies
     @colonies = Colony.where(user: current_user)
+  end
+
+  def destroy
+    @colony.destroy
+    redirect_to colonies_path, notice: 'Colony was successfully destroyed.'
   end
 
   private
