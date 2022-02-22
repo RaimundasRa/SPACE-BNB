@@ -4,7 +4,7 @@
 
 <ul class="colony-list">
   <% @colonies.each do |colony| %>
-  <li><%= colony.name %></li>
+  <li><%= link_to colony.name, colony_path(colony) %></li>
   <% end %>
   <%# <li>Quagmar5</li>
   <li>HugmilonXR-72376r23r78</li>
