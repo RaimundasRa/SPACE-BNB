@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h1>my colonies</h1>
+
+  <%= link_to 'Establish a new Colony', new_colony_path %>
+
+  <ul>
+  <% @colonies.each do |colony| %>
+  <li><%= colony.name %> <a href="#">Edit</a> <a href="#">Delete</a> bookings: [0], established: <%= colony_fake_year(colony) %></li>
+  <% end %>
+  </ul>
+
+</div>
