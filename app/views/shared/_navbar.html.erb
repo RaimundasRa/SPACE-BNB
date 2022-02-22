@@ -1,6 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "/", class: "navbar-brand" do %>
+      <%# cl_image_tag("IMAGE_WITH_FACE_ID",width: 150, height: 150, crop: :thumb, gravity: :face) %>
       <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
 
@@ -12,16 +13,16 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active"><%= link_to "Home", "#", class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Bookings", "#", class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "My Colonies", "#", class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Notifications", "#", class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "My Bookings [0]", "#", class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "My Colonies [0]", my_colonies_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "Notifications [0]", "#", class: "nav-link" %></li>
           <li class="nav-item"><strong class="nav-link"><%= current_user.email.match(/^(?<username>.+)@/)[:username].upcase! %></strong></li>
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Settings", "#", class: "dropdown-item" %>
               <%= link_to "Profile", "#", class: "dropdown-item" %>
-              <%= link_to "Manage my Colonies", "#", class: "dropdown-item" %>
+              <%= link_to "Manage my Colonies", my_colonies_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
