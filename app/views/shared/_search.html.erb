@@ -1,0 +1,19 @@
+<h2>Searchbar 🚀</h2>
+<%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="product-search">
+      <div class="search-element">
+        <label class="search-label">Where would you like to go?</label>
+        <input class="search-input" type="text" autocomplete="on" placeholder="Galaxy Name" name="query">
+      </div>
+      <div class="search-element">
+        <label class="search-label">Check in</label>
+        <input class="search-input" type="text" placeholder="Choose Date" class="" autocomplete="on" name="date-in">
+      </div>
+      <div class="search-element">
+        <label class="search-label">Check out</label>
+        <input class="search-input" type="text" placeholder="Choose Date" class="" autocomplete="on" name="date-out">
+      </div>
+      <a type="submit" class="search-button">Search</a>
+  </div>
+
+<% end %>
