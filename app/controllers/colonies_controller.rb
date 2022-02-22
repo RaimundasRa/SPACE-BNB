@@ -8,6 +8,12 @@ class ColoniesController < ApplicationController
 
   def create
     @colony = Colony.new(colony_params)
+    @colony.user = current_user
+    if @colony.save
+      redirect_to colony_path(@colony)
+    else
+      render :new
+    end
   end
 
   def index
@@ -29,6 +35,6 @@ class ColoniesController < ApplicationController
   end
 
   def colony_params
-    params.require(:colony).permit(:name, :location, :description, :population, :hostility, :user, :photo)
+    params.require(:colony).permit(:name, :location, :description, :population, :hostility)
   end
 end
