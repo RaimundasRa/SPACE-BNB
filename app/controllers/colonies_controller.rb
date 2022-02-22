@@ -1,5 +1,5 @@
 class ColoniesController < ApplicationController
-  before_action :set_colony, only: [:show]
+  before_action :set_colony, only: [:show, :edit, :update]
 
   def new
     @colony = Colony.new
@@ -13,6 +13,17 @@ class ColoniesController < ApplicationController
       redirect_to colony_path(@colony)
     else
       render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @colony.update(colony_params)
+      redirect_to colony_path(@colony), notice: 'Colony was successfully updated.'
+    else
+      render :edit
     end
   end
 
