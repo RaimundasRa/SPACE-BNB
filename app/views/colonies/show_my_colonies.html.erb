@@ -6,7 +6,7 @@
 
   <ul>
   <% @colonies.each do |colony| %>
-  <li><%= colony.name %> <%= link_to "Edit", edit_colony_path(colony) %> <a href="#">Delete</a> bookings: [0], established: <%= colony_fake_year(colony) %></li>
+  <li><%= colony.name %> <%= link_to "Edit", edit_colony_path(colony) %> <%= link_to "Delete", colony_path(colony), method: :delete %> bookings: [0], established: <%= colony_fake_year(colony) %></li>
   <% end %>
   </ul>
 
