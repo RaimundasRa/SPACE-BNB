@@ -2,6 +2,12 @@
 
   <h1><%= @colony.name %></h1>
 
+  <hr>
+
+  <%= cl_image_tag @colony.photo.key, height: 300, width: 400, crop: :fill %>
+
+  <hr>
+
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
