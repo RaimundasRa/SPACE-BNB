@@ -1,16 +1,14 @@
-<div class="container">
+<div class="colony-container">
+  <div class="container">
+    <h2 class="text-center">My Colonies</h2>
+    <%= link_to 'Establish a new Colony', new_colony_path, class: 'btn btn-dark' %>
 
-<div class="container">
-  <h2 class="text-center">My Colonies</h2>
-  <%= link_to 'Establish a new Colony', new_colony_path, class: 'btn btn-dark' %>
-
-  <% @colonies.each do |colony| %>
+    <% @colonies.each do |colony| %>
 
     <div class="card-product" style="margin:10px 0;">
-
       <% if colony.photo.attached? %>
         <!-- <%= cl_image_tag colony.photo.key %> -->
-        <%= link_to (cl_image_tag colony.photo.key), colony_path(colony) %>
+      <%= link_to (cl_image_tag colony.photo.key), colony_path(colony) %>
       <% else %>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
       <% end %>
@@ -27,12 +25,9 @@
         <%= link_to "Edit", edit_colony_path(colony), class: 'btn btn-dark' %>
         <%= link_to "Delete", my_colonies_path, class: 'btn btn-dark', method: :delete %>
       </div>
-   </div>
-
-  <% end %>
-
-</div>
-
+    </div>
+    <% end %>
+  </div>
 </div>
 
 <%= render 'shared/footer'%>
