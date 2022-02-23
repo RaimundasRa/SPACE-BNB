@@ -12,9 +12,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active"><%= link_to "Home", "#", class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "My Bookings [0]", "#", class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "My Colonies [#{Colony.where(user: current_user).count}]", my_colonies_path, class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "My Bookings [0]", "#", class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Notifications [0]", "#", class: "nav-link" %></li>
           <li class="nav-item"><strong class="nav-link"><%= current_user.email.match(/^(?<username>.+)@/)[:username].upcase! %></strong></li>
           <li class="nav-item dropdown">

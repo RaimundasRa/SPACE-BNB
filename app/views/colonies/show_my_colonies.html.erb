@@ -1,15 +1,12 @@
 <div class="container">
 
-  <h2>My Colonies</h2>
-
+<div class="container">
+  <h2 class="text-center">My Colonies</h2>
   <%= link_to 'Establish a new Colony', new_colony_path, class: 'btn btn-dark' %>
 
-  <ul>
   <% @colonies.each do |colony| %>
 
-
-
-    <div class="card-product">
+    <div class="card-product" style="margin:10px 0;">
 
       <% if colony.photo.attached? %>
         <!-- <%= cl_image_tag colony.photo.key %> -->
@@ -22,17 +19,18 @@
         <h2><%= colony.name %></h2>
         <p><strong>Established:</strong> <%= colony_fake_year(colony) %><br>
         <strong>Population: </strong> <%= colony.population %><br>
-        <strong>Hostility: </strong><%= colony.hostility %></p>
-        <strong>Bookings: </strong>0
+        <strong>Hostility: </strong><%= colony.hostility %><br>
+        <strong>Bookings: </strong>0</p>
       </div>
       <div style="float: right; margin-left: 50px;">
+        <%= link_to "View", colony_path(colony), class: 'btn btn-dark' %>
         <%= link_to "Edit", edit_colony_path(colony), class: 'btn btn-dark' %>
-        <%= link_to "Delete", colony_path(colony), class: 'btn btn-dark', method: :delete %>
+        <%= link_to "Delete", my_colonies_path, class: 'btn btn-dark', method: :delete %>
       </div>
    </div>
 
-  <li><%= colony.name %> <%= link_to "Edit", edit_colony_path(colony) %> <%= link_to "Delete", colony_path(colony), method: :delete %> bookings: [0], established: <%= colony_fake_year(colony) %></li>
   <% end %>
-  </ul>
+
+</div>
 
 </div>
