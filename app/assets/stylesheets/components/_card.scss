@@ -1,6 +1,8 @@
 .card-trip {
   overflow: hidden;
   background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .card-trip > img {
@@ -44,6 +46,8 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .card-product img {
@@ -71,3 +75,9 @@
   width: 400px;
 }
 // hey!
+
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
