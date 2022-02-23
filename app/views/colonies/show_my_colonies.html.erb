@@ -23,7 +23,7 @@
       <div style="float: right; margin-left: 50px;">
         <%= link_to "View", colony_path(colony), class: 'btn btn-dark' %>
         <%= link_to "Edit", edit_colony_path(colony), class: 'btn btn-dark' %>
-        <%= link_to "Delete", my_colonies_path, class: 'btn btn-dark', method: :delete %>
+        <%= link_to "Delete", colony_path(colony), class: 'btn btn-dark', method: :delete %>
       </div>
     </div>
     <% end %>
