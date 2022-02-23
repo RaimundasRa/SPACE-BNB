@@ -16,7 +16,7 @@
       <% end %>
 
       <div class="card-product-infos">
-        <h2><%= colony.name %></h2>
+        <h2><%= link_to colony.name, colony_path(colony) %></h2>
         <p><strong>Established:</strong> <%= colony_fake_year(colony) %><br>
         <strong>Population: </strong> <%= colony.population %><br>
         <strong>Hostility: </strong><%= colony.hostility %><br>
