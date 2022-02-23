@@ -14,20 +14,36 @@
   <li>Hostility rating: <%= @colony.hostility %></li>
   </ul>
 
-
-  <h6><a href="#" class="btn btn-primary">Book a stay at this colony</a></h6>
+  <button type="button" class="btn btn-primary" style="width:100%">Book a stay at this colony</button>
 
 
   <h3>Fun activities nearby <%= @colony.name %> </h3>
 
-  <ul>
-  <li>*dummy list item*</li>
-  <li>*dummy list item*</li>
-  <li>*dummy list item*</li>
-  <li>*dummy list item*</li>
-  <li>*dummy list item*</li>
-  <li>*dummy list item*</li>
-  <li>*dummy list item*</li>
-  </ul>
+  <div class="card-product">
+      <img src="https://mtv.mtvnimages.com/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2015/09/Ewok-1441395870.jpg?quality=.8&height=632.8089887640449&width=800" />
+      <div class="card-product-infos">
+        <h2>Hunting Ewoks</h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+   </div>
+
+  <div class="card-product">
+      <img src="https://imageio.forbes.com/specials-images/imageserve/615f7a84c4048b29616d55d6/A-person-fishing-from-a-boat-at-Islands-of-Loreto-/960x0.jpg?fit=bounds&format=jpg&width=960" />
+      <div class="card-product-infos">
+        <h2>Fishing in lake Quaglon</h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+   </div>
+
+  <div class="card-product">
+      <img src="https://livesafely.org/media/posts/123/avoid-being-mugged.jpg" />
+      <div class="card-product-infos">
+        <h2>Getting mugged</h2>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+   </div>
+
+  <button type="button" class="btn btn-light" style="width:100%">Find more activities</button>
+
 
   </div>
