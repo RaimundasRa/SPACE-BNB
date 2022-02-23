@@ -7,6 +7,7 @@ class ColoniesController < ApplicationController
   end
 
   def create
+    raise
     @colony = Colony.new(colony_params)
     @colony.user = current_user
     if @colony.save
@@ -51,6 +52,6 @@ class ColoniesController < ApplicationController
   end
 
   def colony_params
-    params.require(:colony).permit(:name, :location, :description, :population, :hostility)
+    params.require(:colony).permit(:name, :location, :description, :population, :hostility, :photo)
   end
 end
