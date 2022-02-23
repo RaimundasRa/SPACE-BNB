@@ -7,7 +7,7 @@ class ColoniesController < ApplicationController
   end
 
   def create
-    raise
+    # raise
     @colony = Colony.new(colony_params)
     @colony.user = current_user
     if @colony.save
