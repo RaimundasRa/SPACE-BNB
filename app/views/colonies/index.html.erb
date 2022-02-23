@@ -2,10 +2,10 @@
   <div>
     <%= render 'shared/search'%>
   </div>
-  
+
   <h2 class="text-center">Colonies available</h2>
 
-<div class="row">
+<div class="card-container">
   <% @colonies.each do |colony| %>
 
     <div class="card-trip">
@@ -65,7 +65,5 @@
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
-    <div class="footer-copyright">This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-    </div>
+    <div class="footer-copyright">Footer by SpaceBnb</div>
   </div>
-</div>
