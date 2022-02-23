@@ -1,8 +1,11 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-dark navbar-lewagon" style="background: #000;">
   <div class="container-fluid">
     <%= link_to "/", class: "navbar-brand" do %>
       <%# cl_image_tag("IMAGE_WITH_FACE_ID",width: 150, height: 150, crop: :thumb, gravity: :face) %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <div>
+      <%= image_tag "logo.jpg" %>
+      <span style="font-family: 'Gruppo', cursive; font-size: 2em; line-height: 1em; color: white; font-weight: bold;">S P A C E - B N B</span>
+      </div>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
