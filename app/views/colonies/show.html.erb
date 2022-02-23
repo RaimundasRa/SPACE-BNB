@@ -7,7 +7,7 @@
   <h3>Colony information</h3>
 
   <ul>
-  <li>Established by SpaceX in the year <%= @fake_year %></li>
+  <li>Established by <%= @colony.user.email.match(/^(?<username>.+)@/)[:username] %> in the year <%= @fake_year %></li>
   <li>Description: <%= @colony.description %></li>
   <li>Location: <%= @colony.location %></li>
   <li>Population: <%= @colony.population %></li>
