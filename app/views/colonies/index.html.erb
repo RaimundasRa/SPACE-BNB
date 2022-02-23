@@ -20,124 +20,41 @@
       <div class="card-trip-infos">
         <div>
           <h2><%= colony.name %></h2>
-          <p>Short description here!</p>
+          <p>created by <%= colony.user.email.match(/^(?<username>.+)@/)[:username] %> in the year <%= colony_fake_year(colony) %></p>
+          <p><%= colony.description %></p>
         </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <h2 class="card-trip-pricing">£--.--</h2>
+        <img src="https://res.cloudinary.com/dqat8a2hi/image/upload/v1645622283/Space-BNB/terminator-portrait-paint-by-number_gbszfq.jpg" class="card-trip-user avatar-bordered" />
       </div>
     </div>
 
   <% end %>
 </div>
-  <hr>
 
-  <h2>Trending colonies!!</h2>
-  <div class="row">
-    <div class="card-trip col-4">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Colony</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-    <div class="card-trip col-4">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Colony</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-    <div class="card-trip col-4">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Colony</h2>
-          <p>Short description here!</p>
-      </div>
-      <h2 class="card-trip-pricing">£99.99</h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="card-trip col-4">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Colony</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-    <div class="card-trip col-4">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Colony</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-    <div class="card-trip col-4">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Colony</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-  </div>
   <div>
     <h2>More activities</h2>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product" style="margin:10px 0;">
+      <img src="https://res.cloudinary.com/dqat8a2hi/image/upload/v1645620922/Space-BNB/banner_activities_jh28z5.jpg" style="object-fit:cover;" />
       <div class="card-product-infos">
-        <h2>Product name</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <h2>Space walks</h2>
+        <p>Explore nearby asteroids and go space-drifting, tethered to a drone! <strong>fun AND dangerous!</strong></p>
       </div>
    </div>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product" style="margin:10px 0;">
+      <img src="https://res.cloudinary.com/dqat8a2hi/image/upload/v1645621856/Space-BNB/outer-space-normandy-stars-planets-rings-spaceships-science-fiction-vehicles-wide-resolution-1080P-wallpaper-middle-size_whytac.jpg" />
       <div class="card-product-infos">
-        <h2>Product name</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <h2>Space Racing</h2>
+        <p>Test your skills on the v-track in our specialised racing craft! full training provided. <strong>Thrilling!</strong></p>
       </div>
    </div>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product" style="margin:10px 0;">
+      <img src="https://res.cloudinary.com/dqat8a2hi/image/upload/v1645621997/Space-BNB/maxresdefault_xn4qy8.jpg" />
       <div class="card-product-infos">
-        <h2>Product name</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <h2>GWWF Wrestling</h2>
+        <p>Galaxy Wookie Wrestling Federation - fancy yourself as a hard man? do you say 'whats your boggle mate?!' prior to a bar fight? try your luck in the ring with a wrestling wookie. <strong>Life-Changing.</strong></p>
       </div>
    </div>
 
   </div>
-<h1> Cosmic Colonies Index 👽</h1>
-<ul class="colony-list">
-  <% @colonies.each do |colony| %>
-  <li><%= link_to colony.name, colony_path(colony) %></li>
-  <% end %>
-  <%# <li>Quagmar5</li>
-  <li>HugmilonXR-72376r23r78</li>
-  <li>The Pete's Pulsator</li>
-  <li>Esmers</li>
-  <li>Uranus</li>
-  <li>SpaceXv-9ElonMcMuskus</li> %>
-</ul>
 
 </div>
