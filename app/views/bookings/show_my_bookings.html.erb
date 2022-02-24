@@ -1,0 +1,12 @@
+<div class="colony-container">
+  <div class="container">
+    <h2 class="text-center">My Bookings</h2>
+
+    <% @bookings.each do |booking| %>
+    <p><%= booking.colony.name %></p>
+
+    <% end %>
+  </div>
+</div>
+
+<%= render 'shared/footer'%>
