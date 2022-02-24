@@ -3,8 +3,25 @@
     <h2 class="text-center">My Bookings</h2>
 
     <% @bookings.each do |booking| %>
-    <p><%= booking.colony.name %></p>
 
+    <div class="card-product" style="margin:10px 0;">
+      <% if booking.colony.photo.attached? %>
+        <!-- <%= cl_image_tag colony.photo.key %> -->
+      <%= link_to (cl_image_tag colony.photo.key), colony_path(colony) %>
+      <% else %>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <% end %>
+
+      <div class="card-product-infos">
+        <h2><%= link_to booking.colony.name, colony_path(booking.colony)%></h2>
+        <p><strong>Check-in:</strong> <%= booking.start.strftime("%Y %m %d") %><br>
+        <strong>Check-out: </strong> <%= booking.end.strftime("%Y %m %d") %><br>
+      </div>
+      <div style="float: right; margin-left: 50px;">
+        <%= link_to "View", colony_path(booking.colony), class: 'btn btn-dark' %>
+        <%= link_to "Cancel", destroy_booking_path(colony_id: booking.colony.id, id: booking.id), class: 'btn btn-dark', method: :delete %>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>

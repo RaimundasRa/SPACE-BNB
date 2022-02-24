@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/colonies/my_colonies/', to: 'colonies#show_my_colonies', as: :my_colonies
   get '/colonies/my_bookings/', to: 'bookings#show_my_bookings', as: :my_bookings
+  delete '/colonies/:colony_id/bookings/:id', to: 'bookings#destroy', as: :destroy_booking
 
   resources :colonies do
     resources :bookings, only: [:new, :create]
