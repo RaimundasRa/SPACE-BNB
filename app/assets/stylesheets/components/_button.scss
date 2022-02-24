@@ -39,3 +39,42 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-space-gradient {
+  display: inline-block;
+  flex-grow: 1;
+  text-decoration: none;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 1em;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: $dark-red;
+  transition: background-color 0.8s ease, box-shadow 0.5s ease;
+}
+.btn-space-gradient:hover {
+  background: $russian-violet;
+  color: $ghost-white;
+  box-shadow: 0 0 16px 8px rgba(255,255,255,0.4);
+}
+
+/*
+  display: inline-block;
+  flex-grow: 1;
+  text-decoration: none;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 1em;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: $dark-red;
+  transition: background-color 0.8s ease;
+*/
