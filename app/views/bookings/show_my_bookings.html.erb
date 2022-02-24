@@ -8,8 +8,7 @@
 
     <div class="card-product" style="margin:10px 0;">
       <% if booking.colony.photo.attached? %>
-        <!-- <%= cl_image_tag colony.photo.key %> -->
-      <%= link_to (cl_image_tag colony.photo.key), colony_path(colony) %>
+      <%= link_to (cl_image_tag booking.colony.photo.key), colony_path(booking.colony) %>
       <% else %>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
       <% end %>
