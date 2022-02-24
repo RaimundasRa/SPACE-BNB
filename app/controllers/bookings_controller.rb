@@ -19,6 +19,13 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @colony = Colony.find(params[:colony_id])
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to my_bookings_path, notice: 'Booking has been successfully obliterated.'
+  end
+
   def show_my_bookings
     @bookings = Booking.where(user: current_user)
   end
