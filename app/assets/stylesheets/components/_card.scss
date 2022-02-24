@@ -80,8 +80,25 @@
 }
 // hey!
 
-.card-container{
+.card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+svg.card-icon {
+  height: 4em;
+  fill: currentColor;
+}
+
+.stat-card {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #000;
+}
+.stat-card p {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: lighter;
+  opacity: 0.8;
 }
