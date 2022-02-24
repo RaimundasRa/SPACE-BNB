@@ -63,3 +63,46 @@
 a.undecorated {
   color: $ghost-white !important;
 }
+
+/* COLONY BANNER */
+
+.colony-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0 10px 0;
+  margin-bottom: 50px;
+}
+
+.colony-banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.colony-banner p {
+  font-size: 18px;
+  color: white;
+  opacity: .7;
+}
+
+.colony-show-banner {
+  box-shadow: 0 0 8px RGBA(0,0,0,0.3);
+}
+
+.colony-show-banner h1, .colony-show-banner h2, .colony-show-banner p {
+  text-shadow: 1px 1px 12px rgb(0, 0, 0);
+}
+
+.colony-show-banner h1 {
+  font-size: 5em;
+  font-family: $logo-font;
+  font-weight: bolder;
+}
+
+.colony-show-banner h2 {
+  font-size: 3em;
+  font-family: $logo-font;
+  font-weight: bolder;
+}
