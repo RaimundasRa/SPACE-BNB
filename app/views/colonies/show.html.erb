@@ -14,8 +14,7 @@
   <li>Hostility rating: <%= @colony.hostility %></li>
   </ul>
 
-  <button type="button" class="btn btn-primary" style="width:100%">Book a stay at this colony</button>
-
+  <%= link_to "Book a stay at this colony",  new_colony_booking_path(@colony), class: "btn btn-primary"  %>
 
   <h3>Fun activities nearby <%= @colony.name %> </h3>
 
