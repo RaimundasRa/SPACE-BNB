@@ -1,4 +1,65 @@
-.banner{
-  background-color: $russian-violet;
+// .banner{
+//   background-color: $russian-violet;
+//   background-size: cover;
+// }
+
+.banner {
   background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+}
+
+.main-banner {
+  box-shadow: 0 0 8px RGBA(0,0,0,0.3);
+}
+
+.main-banner h1, .main-banner h2, .main-banner p {
+  text-shadow: 1px 1px 12px rgb(0, 0, 0);
+}
+
+.main-banner h1 {
+  font-size: 5em;
+  font-family: $logo-font;
+  font-weight: bolder;
+}
+
+.main-banner h2 {
+  font-size: 2em;
+  // font-family: $logo-font;
+  font-weight: bolder;
+}
+.main-banner p {
+  font-size: 1.5em;
+}
+
+.banner-between {
+  padding: 1em;
+}
+
+.banner-between h2 {
+  font-size: 3em;
+  font-family: $logo-font;
+}
+
+.svg-icon {
+  fill: currentColor;
+  height: 1em;
+}
+
+a.undecorated {
+  color: $ghost-white !important;
 }

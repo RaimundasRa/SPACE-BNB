@@ -1,9 +1,15 @@
 // Specific CSS for your home-page
 body {
+  // font-family: $body-font;
   background-color: $space-cadet;
+  background: $bg-gradient;
   color: $ghost-white;
 }
 
 .container-height{
   min-height: 100vh;
+}
+
+h1, h2 {
+  letter-spacing: 0.1em;
 }
