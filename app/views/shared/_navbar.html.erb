@@ -16,7 +16,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item"><%= link_to "My Colonies [#{Colony.where(user: current_user).count}]", my_colonies_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "My Bookings [0]", "#", class: "nav-link" %></li>
+          <li class="nav-item"><%= link_to "My Bookings [#{Booking.where(user: current_user).count}]", my_bookings_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Notifications [0]", "#", class: "nav-link" %></li>
           <li class="nav-item"><strong class="nav-link"><%= current_user.email.match(/^(?<username>.+)@/)[:username].upcase! %></strong></li>
           <li class="nav-item dropdown">
