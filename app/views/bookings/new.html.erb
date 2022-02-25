@@ -1,25 +1,8 @@
 <div class="container-height">
 
-
-<div class="container">
-  <%= simple_form_for [@colony, @booking] do |f| %>
-
-    <div class="form-inputs">
-      <%= f.date_select :start, order:      [:day, :month, :year],
-                         end_year:   Date.today.year + 1600,
-                         start_year: Date.today.year + 1000 %>
-      <%= f.date_select :end, order:      [:day, :month, :year],
-                         end_year:   Date.today.year + 1600,
-                         start_year: Date.today.year + 1000 %>
-    </div>
-
-    <div class="form-actions">
-      <%= f.submit "Book!" %>
-    </div>
-  <% end %>
-
+  <div class="container">
+    <%= render 'shared/booking_form' %>%
+  </div>
 </div>
-</div>
-
 
 <%= render 'shared/footer'%>

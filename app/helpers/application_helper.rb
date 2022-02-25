@@ -1,6 +1,7 @@
 module ApplicationHelper
 
   def colony_fake_year(colony)
+    # number_with_delimiter(colony.population, delimiter: ',')
     colony.created_at.year + colony.created_at.min + 10000 - colony.created_at.sec
   end
 
