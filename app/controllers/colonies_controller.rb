@@ -43,7 +43,7 @@ class ColoniesController < ApplicationController
 
   def destroy
     @colony.destroy
-    redirect_to colonies_path, notice: 'Colony was successfully destroyed.'
+    redirect_to my_colonies_path, notice: 'Colony was successfully destroyed.'
   end
 
   private
