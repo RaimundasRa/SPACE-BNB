@@ -28,7 +28,9 @@
       <div style="float: right; margin-left: 50px;">
         <%= link_to "View", colony_path(colony), class: 'btn btn-dark' %>
         <%= link_to "Edit", edit_colony_path(colony), class: 'btn btn-dark' %>
-        <%= link_to "Delete", colony_path(colony), class: 'btn btn-dark', method: :delete,  remote: true %>
+
+        <%= link_to "Delete", colony_path(colony), class: 'btn btn-dark', remote: true, method: :delete, data: {confirm: "Are you sure you want to nuke this colony?"} %>
+
       </div>
     </div>
     <% end %>
