@@ -17,7 +17,6 @@
         <% if user_signed_in? %>
           <li class="nav-item"><%= link_to "My Colonies [#{Colony.where(user: current_user).count}]", my_colonies_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "My Bookings [#{Booking.where(user: current_user).count}]", my_bookings_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Notifications [0]", "#", class: "nav-link" %></li>
           <li class="nav-item"><strong class="nav-link"><%= current_user.email.match(/^(?<username>.+)@/)[:username].upcase! %></strong></li>
           <li class="nav-item dropdown">
             <%= image_tag "https://res.cloudinary.com/dqat8a2hi/image/upload/v1645530508/Space-BNB/yuJKnlCNTN2sabHfSPhr_CyberPug_1-4_jcayx0.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
