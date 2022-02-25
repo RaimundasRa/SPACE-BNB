@@ -7,7 +7,6 @@ class ColoniesController < ApplicationController
   end
 
   def create
-    # raise
     @colony = Colony.new(colony_params)
     @colony.user = current_user
     if @colony.save
@@ -29,7 +28,13 @@ class ColoniesController < ApplicationController
   end
 
   def index
-    @colonies = Colony.all
+    if params[:query].present?
+      @colony_search = Colony.global_search( params[:query] )
+      @colonies = @colony_search
+    else
+      puts "No results for your search. Here are other cool galaxies:"
+      @colonies = Colony.all
+    end
   end
 
   def show
