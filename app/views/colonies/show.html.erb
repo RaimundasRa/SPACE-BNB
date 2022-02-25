@@ -1,5 +1,5 @@
 <div class="container-height">
-<!-- Explore -->
+<!-- Colony Details -->
 <div class="banner-between text-center">
   <h2>Colony details</h2>
   <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
@@ -16,60 +16,49 @@
 
 <div class="container">
 
-<div class="row justify-content-center text-center row-cols-auto">
-
+<div class="row justify-content-between text-center m-3">
   <div class="col-3 stat-card">
       <h4><small>Founder</small></h4>
       <p><%= colony_owner_name(@colony) %></p>
   </div>
 
   <div class="col-3 stat-card">
-    <h4>Established</h4>
+    <h4><small>Established</small></h4>
     <p><%= colony_fake_year(@colony) %></p>
   </div>
 
   <div class="col-3 stat-card">
-    <h4>Population</h4>
-    <p><%= colony_population(@colony) %></p>
+      <h4><small>Population</small></h4>
+      <p><%= colony_population(@colony) %></p>
   </div>
-</div>
-
-<div class="row justify-content-center text-center row-cols-auto">
 
   <div class="col-3 stat-card">
       <h4><small>Hostility</small></h4>
-      <p><small><sup><%= @colony.hostility.to_i %>/100</sup></small> '<%= colony_hostility(@colony) %>'</p>
+      <p>'<%= colony_hostility(@colony).capitalize! %>'</p>
   </div>
+</div>
 
-  <div class="col-3 stat-card">
-    <h4>Established</h4>
-    <p><%= colony_fake_year(@colony) %></p>
+<div class="row justify-content-evenly text-left gx-1 m-3">
+  <div class="col-12 stat-card">
+      <p><%= @colony.description %></p>
   </div>
+</div>
 
-  <div class="col-3 stat-card">
-    <h4>Population</h4>
-    <p><%= colony_population(@colony) %></p>
+<div class="row justify-content-evenly text-center gx-1 m-3">
+  <div class="col-12 stat-card">
+  <!-- new booking form inline -->
+  <%= render 'shared/booking_form' %>
+
   </div>
 </div>
 
 
   <!-- Explore -->
 <div class="banner-between text-center">
-  <h2>Colony details</h2>
+  <h2>Thrilling Activities Nearby</h2>
   <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
 </div>
 
-  <ul>
-  <li>Established by <%= colony_owner_name(@colony) %> in the year <%= @fake_year %></li>
-  <li>Description: <%= @colony.description %></li>
-  <li>Location: <%= @colony.location %></li>
-  <li>Population: <%= @colony.population %></li>
-  <li>Hostility rating: <%= @colony.hostility %></li>
-  </ul>
-
-  <%= link_to "Book a stay at this colony",  new_colony_booking_path(@colony), class: "btn btn-primary"  %>
-
-  <h3>Fun activities nearby <%= @colony.name %> </h3>
 
   <div class="card-product">
       <img src="https://mtv.mtvnimages.com/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2015/09/Ewok-1441395870.jpg?quality=.8&height=632.8089887640449&width=800" />
@@ -94,9 +83,6 @@
         <p>Product description with <strong>relevant info</strong> only.</p>
       </div>
    </div>
-
-  <button type="button" class="btn btn-light" style="width:100%">Find more activities</button>
-
 
   </div>
 
