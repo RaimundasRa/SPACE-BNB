@@ -1,9 +1,15 @@
-  <%= simple_form_for [@colony, @booking] do |f| %>
-
-    <div class="form-inputs">
-      <%= f.input :start, as: :date, html5: true %>
-      <%= f.input :end, as: :date, html5: true %>
-
-      <%= f.submit "Book now!" %>
-    </div>
-  <% end %>
+<%= simple_form_for [@colony, @booking] do |f| %>
+<div class="row d-flex align-items-center">
+  <div class="col-5">
+<label for="booking_start">Start date:</label>
+    <input type="date" name="booking[start]" id="booking_start" />
+  </div>
+  <div class="col-5">
+<label for="booking_end">End date:</label>
+    <input type="date" name="booking[end]" id="booking_end" />
+  </div>
+  <div class="col-2">
+  <%= f.submit "Book now!", class: "btn btn-dark" %>
+  </div>
+</div>
+<% end %>
