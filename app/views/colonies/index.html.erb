@@ -22,7 +22,7 @@
       <div class="card-trip-infos">
         <div>
           <h2><%= link_to colony.name, colony_path(colony) %></h2>
-          <p>created by <strong><%= colony.user.email.match(/^(?<username>.+)@/)[:username] %></strong> in the year <%= colony_fake_year(colony) %></p>
+          <p>created by <strong><%= colony_owner_name(colony) %></strong> in the year <%= colony_fake_year(colony) %></p>
           <p><%= colony.description %></p>
         </div>
         <h2 class="card-trip-pricing"><i style="width:1em; height:1em; background:url(https://res.cloudinary.com/dqat8a2hi/image/upload/v1645626818/Space-BNB/Dogecoin_Logo_myyf8i.png); background-size:cover; display:inline-block;"> </i> 500,000.00</h2>
