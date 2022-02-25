@@ -33,7 +33,8 @@ class ColoniesController < ApplicationController
   end
 
   def show
-    @fake_year = @colony.created_at.year + @colony.created_at.min + 10000 - @colony.created_at.sec
+    # @fake_year = @colony.created_at.year + @colony.created_at.min + 10000 - @colony.created_at.sec
+    @booking = Booking.new
   end
 
   def show_my_colonies
