@@ -17,7 +17,7 @@
       <div class="card-product-infos">
         <h2><%= link_to booking.colony.name, colony_path(booking.colony)%></h2>
         <p><strong>Check-in:</strong> <%= booking.start.nil? ? 'no date specified' : booking.start.strftime('%Y-%m-%d') %><br>
-        <strong>Check-out: </strong> <%= booking.start.nil? ? 'no date specified' : booking.end.strftime('%Y-%m-%d') %><br>
+        <strong>Check-out: </strong> <%= booking.end.nil? ? 'no date specified' : booking.end.strftime('%Y-%m-%d') %><br>
       </div>
       <div style="float: right; margin-left: 50px;">
         <%= link_to "View", colony_path(booking.colony), class: 'btn btn-dark' %>
