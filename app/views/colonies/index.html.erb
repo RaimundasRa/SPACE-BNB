@@ -14,11 +14,9 @@
 
     <div class="card-trip">
 
-      <% if colony.photo.attached? %>
-        <%= cl_image_tag colony.photo.key %>
-      <% else %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <% end %>
+
+      <%= image_tag colony_photo_url(colony) %>
+        <%# cl_image_tag colony.photo.key %>
 
       <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> -->
       <div class="card-trip-infos">

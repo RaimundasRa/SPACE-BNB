@@ -11,12 +11,7 @@
     <% @colonies.each do |colony| %>
 
     <div class="card-product" style="margin:10px 0;">
-      <% if colony.photo.attached? %>
-        <!-- <%= cl_image_tag colony.photo.key %> -->
-      <%= link_to (cl_image_tag colony.photo.key), colony_path(colony) %>
-      <% else %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <% end %>
+      <%= link_to (image_tag colony_photo_url(colony)), colony_path(colony) %>
 
       <div class="card-product-infos">
         <h2><%= link_to colony.name, colony_path(colony) %></h2>
