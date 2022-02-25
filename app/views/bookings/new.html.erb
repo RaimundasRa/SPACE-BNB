@@ -2,7 +2,7 @@
 
 
 <div class="container">
-  <%= simple_form_for [@colony, @booking] do |f| %>
+  <%= simple_form_for([ @colony, @booking ], remote: true) do |f| %>
 
     <div class="form-inputs">
       <%= f.date_select :start, order:      [:day, :month, :year],
@@ -14,7 +14,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.submit "Book!" %>
+      <%= f.submit "Book now!" %>
     </div>
   <% end %>
 
