@@ -60,15 +60,15 @@ module ApplicationHelper
       image_url:'https://imageio.forbes.com/specials-images/imageserve/615f7a84c4048b29616d55d6/A-person-fishing-from-a-boat-at-Islands-of-Loreto-/960x0.jpg?fit=bounds&format=jpg&width=960'},
 
       {name: 'Space Walks',
-      description: 'Explore nearby asteroids and go space-drifting, tethered to a drone! <strong>fun AND dangerous!</strong>',
+      description: 'Explore nearby asteroids and go space-drifting, tethered to a drone! fun AND dangerous!',
       image_url:'https://res.cloudinary.com/dqat8a2hi/image/upload/v1645620922/Space-BNB/banner_activities_jh28z5.jpg'},
 
       {name: 'Space Racing',
-      description: 'Test your skills on the v-track in our specialised racing craft! full training provided. <strong>Thrilling!</strong>',
+      description: 'Test your skills on the v-track in our specialised racing craft! full training provided. Thrilling!',
       image_url:'https://res.cloudinary.com/dqat8a2hi/image/upload/v1645621856/Space-BNB/outer-space-normandy-stars-planets-rings-spaceships-science-fiction-vehicles-wide-resolution-1080P-wallpaper-middle-size_whytac.jpg'},
 
       {name: 'GWWF Wrestling',
-      description: 'Galactic Wookie Wrestling Federation - fancy yourself as a hard man? do you say \'whats your boggle mate?!\' prior to a bar fight? try your luck in the ring with a wrestling wookie. <strong>Life-Changing.</strong>',
+      description: 'Galactic Wookie Wrestling Federation - fancy yourself as a hard man? do you say \'whats your boggle mate?!\' prior to a bar fight? try your luck in the ring with a wrestling wookie. Life-Changing.',
       image_url:'https://res.cloudinary.com/dqat8a2hi/image/upload/v1645621997/Space-BNB/maxresdefault_xn4qy8.jpg'}
       ]
 
