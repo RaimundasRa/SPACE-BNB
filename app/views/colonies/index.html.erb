@@ -42,32 +42,15 @@
   <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
 </div>
 
-    <div class="card-product" style="margin:10px 0;">
-      <img src="https://res.cloudinary.com/dqat8a2hi/image/upload/v1645620922/Space-BNB/banner_activities_jh28z5.jpg" style="object-fit:cover;" />
-
-      <div class="card-product-infos">
-        <h2>Space walks</h2>
-        <p>Explore nearby asteroids and go space-drifting, tethered to a drone! <strong>fun AND dangerous!</strong></p>
-      </div>
-   </div>
-
-    <div class="card-product" style="margin:10px 0;">
-      <img src="https://res.cloudinary.com/dqat8a2hi/image/upload/v1645621856/Space-BNB/outer-space-normandy-stars-planets-rings-spaceships-science-fiction-vehicles-wide-resolution-1080P-wallpaper-middle-size_whytac.jpg" />
-
-      <div class="card-product-infos">
-        <h2>Space Racing</h2>
-        <p>Test your skills on the v-track in our specialised racing craft! full training provided. <strong>Thrilling!</strong></p>
-      </div>
-   </div>
-
-    <div class="card-product" style="margin:10px 0;">
-      <img src="https://res.cloudinary.com/dqat8a2hi/image/upload/v1645621997/Space-BNB/maxresdefault_xn4qy8.jpg" />
-
-      <div class="card-product-infos">
-        <h2>GWWF Wrestling</h2>
-        <p>Galaxy Wookie Wrestling Federation - fancy yourself as a hard man? do you say 'whats your boggle mate?!' prior to a bar fight? try your luck in the ring with a wrestling wookie. <strong>Life-Changing.</strong></p>
-      </div>
-   </div>
+  <% random_activities(4).each do |activity| %>
+    <div class="card-product">
+        <img src="<%= activity[:image_url] %>" />
+        <div class="card-product-infos">
+          <h2><%= activity[:name] %></h2>
+          <p><%= activity[:description] %></p>
+        </div>
+    </div>
+  <% end %>
 
   </div>
 </div>
