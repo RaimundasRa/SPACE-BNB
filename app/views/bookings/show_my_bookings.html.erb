@@ -11,11 +11,8 @@
     <% @bookings.each do |booking| %>
 
     <div class="card-product" style="margin:10px 0;">
-      <% if booking.colony.photo.attached? %>
-      <%= link_to (cl_image_tag booking.colony.photo.key), colony_path(booking.colony) %>
-      <% else %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <% end %>
+
+      <%= link_to (image_tag colony_photo_url(booking.colony)), colony_path(booking.colony) %>
 
       <div class="card-product-infos">
         <h2><%= link_to booking.colony.name, colony_path(booking.colony)%></h2>

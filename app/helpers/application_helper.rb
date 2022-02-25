@@ -33,4 +33,15 @@ module ApplicationHelper
   def colony_population(colony)
     number_with_delimiter(colony.population, delimiter: ',')
   end
+
+  def colony_photo(colony)
+  end
+
+  def colony_photo_url(colony)
+    if colony.photo.attached?
+      cloudinary_url(colony.photo.key)
+    else
+      'https://res.cloudinary.com/dqat8a2hi/image/upload/v1645788291/Space-BNB/wp1923649_ih89r9.jpg'
+    end
+  end
 end

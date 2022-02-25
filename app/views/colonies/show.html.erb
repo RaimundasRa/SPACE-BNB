@@ -7,7 +7,7 @@
 
 <!-- COLONY BANNER -->
 
-<div class="colony-banner colony-show-banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.7)), url(<%= cloudinary_url(@colony.photo.key) %>);">
+<div class="colony-banner colony-show-banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.7)), url(<%= colony_photo_url(@colony) %>);">
   <div class="container">
     <h2><strong><%= @colony.name %></strong></h2>
     <p>Established by <strong><%= colony_owner_name(@colony) %></strong> in the year <%= colony_fake_year(@colony) %>. This colony is home to <strong><%= colony_population(@colony) %></strong> inhabitants with a <strong><%= colony_hostility(@colony) %></strong> hostility rating.</p>
